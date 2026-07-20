@@ -7,3 +7,12 @@ services:
     restart: always
     ports:
       - 8080:8080
+
+  authentication:
+    build:
+      context: ./authentication-service
+      dockerfile: Dockerfile
+    container_name: authentication
+    restart: always
+    ports:
+      - 8081:8081
